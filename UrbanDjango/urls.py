@@ -17,12 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from task2.views import views1, views2
+from task3.views import main_page , shop_page, basket_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('views1/', views1),
-  # http://127.0.0.1:8000/views1/
-    path('views2/', views2.as_view()),
-  # http://127.0.0.1:8000/views2/
-
+    path('platform/', main_page),
+    path('platform/shop_page/', shop_page),
+    path('platform/basket_page/', basket_page),
 ]
