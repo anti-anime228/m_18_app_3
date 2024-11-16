@@ -21,6 +21,9 @@ from task3.views import main_page , shop_page, basket_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('views1/', views1),
+    path('views2/', views2.as_view()),
+
     path('platform/', main_page),
     path('platform/shop_page/', shop_page),
     path('platform/basket_page/', basket_page),
