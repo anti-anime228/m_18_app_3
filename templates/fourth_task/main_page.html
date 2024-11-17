@@ -1,15 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "menu.html" %}
+
 <head>
     <meta charset="UTF-8">
     <title>{{name}}</title>
 </head>
-<body>
-    <h1>Главная страница</h1>
-    <a href="#">Главная страница</a>
-    <br>
-    <a href="http://127.0.0.1:8000/platform/shop_page">Магазин</a>
-    <br>
-    <a href="http://127.0.0.1:8000/platform/basket_page">Корзина</a>
-</body>
-</html>
+
+
+{% block pagename %}
+    {{ block.super }}
+{% endblock %}
+
+{% block menu %}
+    {{ block.super }}
+{% endblock %}
+
+
+{% block content %}
+    {{ block.super }}
+    <p>asd</p>
+{% endblock %}

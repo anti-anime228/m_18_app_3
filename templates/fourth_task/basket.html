@@ -1,18 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Все игры.ру</title>
-</head>
-<body>
-    Ваша корзина пока пуста, по этому вот вам шутка
-    <br>
-    <br>
-    <h4>{{joke}}</h4>
-    <br>
-    <br>
-    <a href="http://127.0.0.1:8000/platform">
-    <button>Вернуться обратно</button>
-</a>
-</body>
-</html>
+{% extends "menu.html" %}
+
+
+{% block pagename %}
+    {{ block.super }}
+{% endblock %}
+
+{% block menu %}
+    {{ block.super }}
+{% endblock %}
+
+
+{% block content %}
+    {{ block.super }}
+    <h3>Извинте, Ваша корзина пуста</h3>
+{% endblock %}

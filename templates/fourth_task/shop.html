@@ -1,22 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{name}}</title>
-</head>
-<body>
-    <h1>Игры</h1>
-
-    <ul>
-        <li>{{game1}} <button>Купить</button></li>
-        <li>{{game2}} <button>Купить</button></li>
-        <li>{{game3}} <button>Купить</button></li>
+{% extends "menu.html" %}
 
 
-    </ul>
-<a href="http://127.0.0.1:8000/platform">
-    <button>Вернуться обратно</button>
-</a>
+{% block pagename %}
+    <h1>{{name}}</h1>
+{% endblock %}
 
-</body>
-</html>
+{% block menu %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
+{% for game in games %}
+            <li>{{ game|upper }}  <button>Купить</button></li>
+        {% endfor %}
+<button><a href="/platform">Назад</a></button>
+{% endblock %}
+git remote add origin https://github.com/anti-anime228/m_18_app_3.git
+
